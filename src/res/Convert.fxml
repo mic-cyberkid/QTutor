@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="750.0" styleClass="main-border-pane-converter" stylesheets="@Convert.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConverterController">
+    <center>
+        <TabPane fx:id="MainTab" prefHeight="500.0" prefWidth="750.0" styleClass="main-tab-pane" stylesheets="@Convert.css" BorderPane.alignment="CENTER">
+            <tabs>
+                <!-- Home Tab -->
+                <Tab fx:id="homeTab" closable="false" styleClass="converter-tab">
+                    <graphic>
+                        <Label styleClass="custom-text" text="Home" textFill="WHITE">
+                            <font>
+                                <Font name="Inter Medium" size="16.0" />
+                            </font>
+                        </Label>
+                    </graphic>
+                    <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" styleClass="explanation-scroll-pane">
+                            <content>
+                                <VBox alignment="CENTER" spacing="20.0" styleClass="home-tab-content">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <HBox alignment="CENTER" spacing="30.0" VBox.vgrow="ALWAYS">
+                                        <Button mnemonicParsing="false" onAction="#addTemperatureTab" prefHeight="120.0" prefWidth="280.0" styleClass="category-button" text="Temperature" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Bold" size="24.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/icons/Temperature.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button mnemonicParsing="false" onAction="#addTimeTab" prefHeight="120.0" prefWidth="280.0" styleClass="category-button" text="Time" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Bold" size="24.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/icons/Time.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="30.0" VBox.vgrow="ALWAYS">
+                                        <Button mnemonicParsing="false" onAction="#addLengthTab" prefHeight="120.0" prefWidth="280.0" styleClass="category-button" text="Length" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Bold" size="24.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/icons/RulerWhite.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button mnemonicParsing="false" onAction="#addAreaTab" prefHeight="120.0" prefWidth="280.0" styleClass="category-button" text="Area" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Bold" size="24.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/icons/AreaWhite.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="30.0" VBox.vgrow="ALWAYS">
+                                        <Button mnemonicParsing="false" onAction="#addVolumeTab" prefHeight="120.0" prefWidth="280.0" styleClass="category-button" text="Volume" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Bold" size="24.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/icons/VolumeObject.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button mnemonicParsing="false" onAction="#addWeightTab" prefHeight="120.0" prefWidth="280.0" styleClass="category-button" text="Weight" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Bold" size="24.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/icons/Weight.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </HBox>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </Tab>
+
+                <!-- Temperature Tab -->
+                <Tab fx:id="temperatureTab" styleClass="converter-tab">
+                    <graphic>
+                        <Label styleClass="custom-text" text="Temperature" textFill="WHITE">
+                            <font>
+                                <Font name="Inter Medium" size="16.0" />
+                            </font>
+                        </Label>
+                    </graphic>
+                    <content>
+                        <HBox spacing="15.0" styleClass="conversion-tab-content">
+                            <children>
+                                <VBox alignment="TOP_CENTER" spacing="15.0" styleClass="conversion-input-section" HBox.hgrow="ALWAYS">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <Label styleClass="custom-title" text="Temperature" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="28.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="tempResult" alignment="CENTER" editable="false" promptText="Result" styleClass="result-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="tempInput" alignment="CENTER" promptText="Value" styleClass="input-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <HBox alignment="CENTER" spacing="15.0">
+                                        <ComboBox fx:id="tempFromBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                        <Label text="to" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="tempToBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                    </HBox>
+                                    <VBox alignment="CENTER" spacing="10.0">
+                                        <Button mnemonicParsing="false" onAction="#temperatureConvert" prefHeight="45.0" prefWidth="160.0" styleClass="primary-action-button" text="Convert" textFill="WHITE" />
+                                        <Button mnemonicParsing="false" onAction="#temperatureSwap" prefHeight="40.0" prefWidth="120.0" styleClass="secondary-action-button" text="Swap" textFill="WHITE" />
+                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#temperatureExplain" prefHeight="40.0" prefWidth="120.0" styleClass="primary-action-button" text="Explain" textFill="WHITE" />
+                                </VBox>
+                                <VBox styleClass="explanation-section" HBox.hgrow="ALWAYS">
+                                    <Label alignment="CENTER" styleClass="custom-text" text="Explanation" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="20.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets bottom="10.0" top="10.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <ScrollPane fx:id="tempExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" styleClass="explanation-scroll-pane" VBox.vgrow="ALWAYS">
+                                        <!-- Explanation content will be loaded here -->
+                                    </ScrollPane>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+
+                <!-- Time Tab (structure similar to Temperature Tab) -->
+                <Tab fx:id="timeTab" styleClass="converter-tab">
+                    <graphic>
+                        <Label styleClass="custom-text" text="Time" textFill="WHITE">
+                            <font>
+                                <Font name="Inter Medium" size="16.0" />
+                            </font>
+                        </Label>
+                    </graphic>
+                    <content>
+                        <HBox spacing="15.0" styleClass="conversion-tab-content">
+                            <children>
+                                <VBox alignment="TOP_CENTER" spacing="15.0" styleClass="conversion-input-section" HBox.hgrow="ALWAYS">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <Label styleClass="custom-title" text="Time" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="28.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="timeResult" alignment="CENTER" editable="false" promptText="Result" styleClass="result-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="timeInput" alignment="CENTER" promptText="Value" styleClass="input-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <HBox alignment="CENTER" spacing="15.0">
+                                        <ComboBox fx:id="timeFromBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                        <Label text="to" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="timeToBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                    </HBox>
+                                    <VBox alignment="CENTER" spacing="10.0">
+                                        <Button mnemonicParsing="false" onAction="#timeConvert" prefHeight="45.0" prefWidth="160.0" styleClass="primary-action-button" text="Convert" textFill="WHITE" />
+                                        <Button mnemonicParsing="false" onAction="#timeSwap" prefHeight="40.0" prefWidth="120.0" styleClass="secondary-action-button" text="Swap" textFill="WHITE" />
+                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#timeExplain" prefHeight="40.0" prefWidth="120.0" styleClass="primary-action-button" text="Explain" textFill="WHITE" />
+                                </VBox>
+                                <VBox styleClass="explanation-section" HBox.hgrow="ALWAYS">
+                                    <Label alignment="CENTER" styleClass="custom-text" text="Explanation" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="20.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets bottom="10.0" top="10.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <ScrollPane fx:id="timeExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" styleClass="explanation-scroll-pane" VBox.vgrow="ALWAYS">
+                                        <!-- Explanation content will be loaded here -->
+                                    </ScrollPane>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+
+                <!-- Length Tab -->
+                <Tab fx:id="lengthTab" styleClass="converter-tab">
+                    <graphic>
+                        <Label styleClass="custom-text" text="Length" textFill="WHITE">
+                            <font>
+                                <Font name="Inter Medium" size="16.0" />
+                            </font>
+                        </Label>
+                    </graphic>
+                    <content>
+                        <HBox spacing="15.0" styleClass="conversion-tab-content">
+                            <children>
+                                <VBox alignment="TOP_CENTER" spacing="15.0" styleClass="conversion-input-section" HBox.hgrow="ALWAYS">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <Label styleClass="custom-title" text="Length" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="28.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="lengthResult" alignment="CENTER" editable="false" promptText="Result" styleClass="result-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="lengthInput" alignment="CENTER" promptText="Value" styleClass="input-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <HBox alignment="CENTER" spacing="15.0">
+                                        <ComboBox fx:id="lengthFromBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                        <Label text="to" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="lengthToBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                    </HBox>
+                                    <VBox alignment="CENTER" spacing="10.0">
+                                        <Button mnemonicParsing="false" onAction="#lengthConvert" prefHeight="45.0" prefWidth="160.0" styleClass="primary-action-button" text="Convert" textFill="WHITE" />
+                                        <Button mnemonicParsing="false" onAction="#lengthSwap" prefHeight="40.0" prefWidth="120.0" styleClass="secondary-action-button" text="Swap" textFill="WHITE" />
+                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#lengthExplain" prefHeight="40.0" prefWidth="120.0" styleClass="primary-action-button" text="Explain" textFill="WHITE" />
+                                </VBox>
+                                <VBox styleClass="explanation-section" HBox.hgrow="ALWAYS">
+                                    <Label alignment="CENTER" styleClass="custom-text" text="Explanation" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="20.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets bottom="10.0" top="10.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <ScrollPane fx:id="lengthExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" styleClass="explanation-scroll-pane" VBox.vgrow="ALWAYS">
+                                        <!-- Explanation content will be loaded here -->
+                                    </ScrollPane>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+
+                <!-- Area Tab -->
+                <Tab fx:id="areaTab" styleClass="converter-tab">
+                    <graphic>
+                        <Label styleClass="custom-text" text="Area" textFill="WHITE">
+                            <font>
+                                <Font name="Inter Medium" size="16.0" />
+                            </font>
+                        </Label>
+                    </graphic>
+                    <content>
+                        <HBox spacing="15.0" styleClass="conversion-tab-content">
+                            <children>
+                                <VBox alignment="TOP_CENTER" spacing="15.0" styleClass="conversion-input-section" HBox.hgrow="ALWAYS">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <Label styleClass="custom-title" text="Area" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="28.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="areaResult" alignment="CENTER" editable="false" promptText="Result" styleClass="result-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="areaInput" alignment="CENTER" promptText="Value" styleClass="input-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <HBox alignment="CENTER" spacing="15.0">
+                                        <ComboBox fx:id="areaFromBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                        <Label text="to" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="areaToBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                    </HBox>
+                                    <VBox alignment="CENTER" spacing="10.0">
+                                        <Button mnemonicParsing="false" onAction="#areaConvert" prefHeight="45.0" prefWidth="160.0" styleClass="primary-action-button" text="Convert" textFill="WHITE" />
+                                        <Button mnemonicParsing="false" onAction="#areaSwap" prefHeight="40.0" prefWidth="120.0" styleClass="secondary-action-button" text="Swap" textFill="WHITE" />
+                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#areaExplain" prefHeight="40.0" prefWidth="120.0" styleClass="primary-action-button" text="Explain" textFill="WHITE" />
+                                </VBox>
+                                <VBox styleClass="explanation-section" HBox.hgrow="ALWAYS">
+                                    <Label alignment="CENTER" styleClass="custom-text" text="Explanation" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="20.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets bottom="10.0" top="10.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <ScrollPane fx:id="areaExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" styleClass="explanation-scroll-pane" VBox.vgrow="ALWAYS">
+                                        <!-- Explanation content will be loaded here -->
+                                    </ScrollPane>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+
+                <!-- Weight Tab -->
+                <Tab fx:id="weightTab" styleClass="converter-tab">
+                    <graphic>
+                        <Label styleClass="custom-text" text="Weight" textFill="WHITE">
+                            <font>
+                                <Font name="Inter Medium" size="16.0" />
+                            </font>
+                        </Label>
+                    </graphic>
+                    <content>
+                        <HBox spacing="15.0" styleClass="conversion-tab-content">
+                            <children>
+                                <VBox alignment="TOP_CENTER" spacing="15.0" styleClass="conversion-input-section" HBox.hgrow="ALWAYS">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <Label styleClass="custom-title" text="Weight" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="28.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="weightResult" alignment="CENTER" editable="false" promptText="Result" styleClass="result-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="weightInput" alignment="CENTER" promptText="Value" styleClass="input-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <HBox alignment="CENTER" spacing="15.0">
+                                        <ComboBox fx:id="weightFromBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                        <Label text="to" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="weightToBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                    </HBox>
+                                    <VBox alignment="CENTER" spacing="10.0">
+                                        <Button mnemonicParsing="false" onAction="#weightConvert" prefHeight="45.0" prefWidth="160.0" styleClass="primary-action-button" text="Convert" textFill="WHITE" />
+                                        <Button mnemonicParsing="false" onAction="#weightSwap" prefHeight="40.0" prefWidth="120.0" styleClass="secondary-action-button" text="Swap" textFill="WHITE" />
+                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#weightExplain" prefHeight="40.0" prefWidth="120.0" styleClass="primary-action-button" text="Explain" textFill="WHITE" />
+                                </VBox>
+                                <VBox styleClass="explanation-section" HBox.hgrow="ALWAYS">
+                                    <Label alignment="CENTER" styleClass="custom-text" text="Explanation" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="20.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets bottom="10.0" top="10.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <ScrollPane fx:id="weightExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" styleClass="explanation-scroll-pane" VBox.vgrow="ALWAYS">
+                                        <!-- Explanation content will be loaded here -->
+                                    </ScrollPane>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+
+                <!-- Volume Tab -->
+                <Tab fx:id="volumeTab" styleClass="converter-tab">
+                    <graphic>
+                        <Label styleClass="custom-text" text="Volume" textFill="WHITE">
+                            <font>
+                                <Font name="Inter Medium" size="16.0" />
+                            </font>
+                        </Label>
+                    </graphic>
+                    <content>
+                        <HBox spacing="15.0" styleClass="conversion-tab-content">
+                            <children>
+                                <VBox alignment="TOP_CENTER" spacing="15.0" styleClass="conversion-input-section" HBox.hgrow="ALWAYS">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <Label styleClass="custom-title" text="Volume" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="28.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="volumeResult" alignment="CENTER" editable="false" promptText="Result" styleClass="result-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="volumeInput" alignment="CENTER" promptText="Value" styleClass="input-text-field">
+                                        <font>
+                                            <Font name="Inter Regular" size="24.0" />
+                                        </font>
+                                    </TextField>
+                                    <HBox alignment="CENTER" spacing="15.0">
+                                        <ComboBox fx:id="volumeFromBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                        <Label text="to" textFill="WHITE">
+                                            <font>
+                                                <Font name="Inter Regular" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="volumeToBox" prefWidth="180.0" styleClass="unit-combo-box" />
+                                    </HBox>
+                                    <VBox alignment="CENTER" spacing="10.0">
+                                        <Button mnemonicParsing="false" onAction="#volumeConvert" prefHeight="45.0" prefWidth="160.0" text="Convert" textFill="WHITE">
+                                 <styleClass>
+                                    <String fx:value="primary-action-button" />
+                                    <String fx:value="custom-title" />
+                                 </styleClass></Button>
+                                        <Button mnemonicParsing="false" onAction="#volumeSwap" prefHeight="40.0" prefWidth="120.0" styleClass="secondary-action-button" text="Swap" textFill="WHITE" />
+                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#volumeExplain" prefHeight="40.0" prefWidth="120.0" styleClass="primary-action-button" text="Explain" textFill="WHITE" />
+                                </VBox>
+                                <VBox styleClass="explanation-section" HBox.hgrow="ALWAYS">
+                                    <Label alignment="CENTER" styleClass="custom-text" text="Explanation" textFill="WHITE">
+                                        <font>
+                                            <Font name="Inter Bold" size="20.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets bottom="10.0" top="10.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <ScrollPane fx:id="volumeExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" styleClass="explanation-scroll-pane" VBox.vgrow="ALWAYS">
+                                        <!-- Explanation content will be loaded here -->
+                                    </ScrollPane>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+    <top>
+        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" spacing="5.0" styleClass="title-bar-converter">
+            <children>
+                <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/rounded/image1.png" /> <!-- Your app icon -->
+                            </image>
+                            <effect>
+                                <DropShadow color="#00000040" height="0.0" radius="5.0" width="0.0" />
+                            </effect>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label alignment="CENTER_LEFT" contentDisplay="CENTER" text="Units Converter" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Black" size="20.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#00000040" height="0.0" radius="5.0" width="0.0" />
+                            </effect>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <VBox alignment="CENTER" onMouseClicked="#minimizeWindow" styleClass="window-control-button">
+                    <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/icons/minimize.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </VBox>
+                <VBox fx:id="resize_box" alignment="CENTER" onMouseClicked="#resizeWindow" styleClass="window-control-button">
+                    <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/icons/maximize_white.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" onMouseClicked="#closeWindow" styleClass="window-control-button-close">
+                    <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/icons/close_white.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </top>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</BorderPane>

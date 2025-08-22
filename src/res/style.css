@@ -1,0 +1,87 @@
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+
+    body,h1, h2, p{
+        margin: 0;
+        padding: 0%;
+        
+    }
+
+    /*  Header styles */
+    header{
+        position:fixed;
+        color:white;
+        padding:10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .header-content{
+        background-color: #6366f1;
+        color: white;
+        display: flex;
+    }
+    .profile-pic{
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+    }
+
+    main{
+        flex:1;
+        background-color: #6366f1;
+        padding: 20px;
+        border-right: 1px solid #ddd;
+    }
+
+    .content{
+        flex: 1;
+        padding: 20px;
+    }
+    .conversation-list {
+      width: 250px;
+      background-color: #2f3136;
+      color: white;
+      overflow-y: scroll;
+      transition: width 0.3s ease;
+    }
+
+    .conversation-list.collapsed {
+      width: 0;
+      overflow: hidden;
+    }
+
+    #chatArea {
+      flex: 1;
+      background-color: #f4f4f4;
+      padding: 20px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .toggle-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .chat-item {
+      padding: 10px;
+      border-bottom: 1px solid #444;
+    }
+
+    .chat-item:hover {
+      background-color: #40444b;
+    }

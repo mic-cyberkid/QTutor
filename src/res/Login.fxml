@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="387.0" prefWidth="284.0" style="-fx-background-color: rgba(44,62,80,0.2); -fx-background-radius: 10;" stylesheets="@chatPane.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <Label prefHeight="27.0" prefWidth="241.0" text="Please login to continue" textFill="WHITE">
+         <font>
+            <Font name="Century" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" prefHeight="22.0" prefWidth="243.0" text="Username:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="username_field" prefHeight="40.0" prefWidth="239.0" promptText="username" style="-fx-background-radius: 4;">
+         <font>
+            <Font name="Century" size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+         <effect>
+            <DropShadow height="6.5" radius="2.75" width="6.5" />
+         </effect>
+      </TextField>
+      <Label alignment="TOP_LEFT" prefHeight="22.0" prefWidth="235.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Label>
+      <PasswordField fx:id="password_field" prefHeight="40.0" prefWidth="238.0" promptText="password" style="-fx-background-radius: 3;">
+         <font>
+            <Font name="Century" size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+         <effect>
+            <DropShadow height="6.5" radius="2.75" width="6.5" />
+         </effect>
+      </PasswordField>
+      <HBox>
+         <children>
+            <Label fx:id="loginInfoLabel" alignment="CENTER" prefHeight="27.0" prefWidth="383.0" textAlignment="CENTER" textFill="#e11111">
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+            </Label>
+            <Label id="forgot-password" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#openPasswordResetPane" prefHeight="27.0" prefWidth="383.0" styleClass="forgot-password" text="forgot password" textAlignment="CENTER" textFill="#1e23b9" underline="true">
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#loginUser" prefHeight="37.0" prefWidth="149.0" style="-fx-background-color: #23da3f; -fx-background-radius: 20px;" styleClass="custom-button" text="Start Chat" textFill="WHITE">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/basic-login-white.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backToHome" prefHeight="45.0" prefWidth="103.0" style="-fx-background-color: #da2323; -fx-background-radius: 20px;" styleClass="custom-button" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/basic-back-white.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

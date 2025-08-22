@@ -1,0 +1,68 @@
+
+
+.title-pane > .title{
+    -fx-font-size: 100px;
+}
+
+
+/* Style the Accordion */
+.accordion {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Style each TitledPane */
+.titled-pane {
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-border-radius: 10px; /* Rounded corners for the border */
+    -fx-background-radius: 10px; /* Rounded corners for the background */
+    -fx-padding: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1); /* Subtle shadow for depth */
+}
+
+/* Style the title region of each TitledPane */
+.titled-pane > .title{
+    -fx-background-color:   #225ba4; /* Background color of the title */
+    -fx-background-radius: 10px; /* Rounded corners for the title */
+    -fx-font-size: 14px; /* Font size */
+    -fx-wrap-text: true;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1); 
+}
+
+/*Style title text */
+.titled-pane > .title .text{
+    -fx-text-fill: white;
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.title-pane > .scroll-pane > .vbox  > .hbox > .label{
+    -fx-text-fill: white;
+}
+
+/* Style the content region of each TitledPane */
+.titled-pane > *.content {
+    -fx-background-color: transparent; /* Background color of the content area */
+    -fx-background-radius: 10px; /* Rounded corners for the content area */
+    -fx-padding: 2.5px;
+    -fx-margin: 2.5px;
+}
+
+
+
+/* Edit button */
+.button {
+    -fx-background-size: contain; /* Ensures the image is contained within the button */
+    -fx-background-repeat: no-repeat; /* Avoid repeating the image */
+    /* -fx-background-position: center center; /* Centers the image */
+    -fx-background-radius: 5px; 
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-background-color: lime; 
+    -fx-text-fill: white;
+    
+}

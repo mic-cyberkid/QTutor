@@ -1,0 +1,22 @@
+#chatScrollPane {
+    -fx-background-radius: 10;
+    -fx-backgroubd-insets: 0;
+    -fx-padding: 0;
+    -fx-border-radius : 10;
+    -fx-border-width: 0;
+}
+#chatScrollPane .scroll-bar{
+    -fx-background-radius : 10;
+}
+
+#chatScrollPane .scroll-bar > .increment-button, #chatScrollPane .scroll-bar .decrement-button{
+    -fx-background-radius : 10;
+}
+
+#chatScrollPane .scroll-bar .thumb {
+    -fx-background-radius : 10;
+}
+
+#chatScrollPane .scroll-bar .track {
+    -fx-background-radius : 10;
+}

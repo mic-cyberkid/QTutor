@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Physics Lab Simulations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .card-content {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center; color:#333;">Physics Lab Experiments</h1>
+    <div class="container">
+
+        <div class="card">
+            <a href="./states-of-matter_en.html">
+
+                <img src="../images/PHET/states-of-matter-420.png" alt="States of Matter">
+            </a>
+            <div class="card-content">
+                <div class="card-title">State Of Matter</div>
+                <div class="card-description">Demonstrates the various types of matter.</div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./density_en.html">
+                <img src="../images/PHET/density-900.png" alt="Density">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Density</div>
+                <div class="card-description">Demonstrates density of substances.</div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./buoyancy-basics_en.html">
+                <img src="../images/PHET/buoyancy-basics-900.png" alt="Bouyancy">
+            </a>
+
+            <div class="card-content">
+                <div class="card-title">Bouyancy</div>
+                <div class="card-description">Simulation on bouyancy.</div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./forces-and-motion-basics_en.html">
+                <img src="../images/PHET/forces-and-motion-basics-420.png" alt="Forces and Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Forces and Motion</div>
+                <div class="card-description">Simulation on forces and motion.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="./projectile-motion_en.html">
+                <img src="../images/PHET/projectile-motion-420.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Projectile Motion</div>
+                <div class="card-description">Simulation on projectile motion.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./projectile-data-lab_en.html">
+                <img src="../images/PHET/projectile-motion-420.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Projectile Motion Data</div>
+                <div class="card-description">Simulation on projectile motion data collection.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./ohms-law_en.html">
+                <img src="../images/PHET/ohms-law-900.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Ohms Law</div>
+                <div class="card-description">Simulation on Ohms law.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./resistance-in-a-wire_en.html">
+                <img src="../images/PHET/resistance-in-a-wire-900.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Resistance in a Wire</div>
+                <div class="card-description">Simulation on resistance of a wire.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./generator_en.html">
+                <img src="../images/PHET/generator-420.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Generator</div>
+                <div class="card-description">Simulation on how generator operates.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./magnet-and-compass_en.html">
+                <img src="../images/PHET/magnet-and-compass-420.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Magnets and Compass</div>
+                <div class="card-description">Simulation on magnets and compass.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./magnets-and-electromagnets_en.html">
+                <img src="../images/PHET/magnets-and-electromagnets-420.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Magnets and Electromagnets</div>
+                <div class="card-description">Simulation on Magnets and Electromagnets.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="./keplers-laws_en.html">
+                <img src="../images/PHET/keplers-laws-420.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Keplers Laws</div>
+                <div class="card-description">Simulation on Keplers laws.
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <a href="./geometric-optics_en.html">
+                <img src="../images/PHET/geometric-optics-420.png" alt="Projectile Motion">
+            </a>
+            <div class="card-content">
+                <div class="card-title">Geometric Optics</div>
+                <div class="card-description">Simulation on Lenses and Mirrors.
+                </div>
+            </div>
+        </div>
+
+        <!-- We add more labs later if necessary -->
+    </div>
+
+    <footer>
+        <!-- Attribution on Lab Simulation. Thank you PHETLABS (o-*) -->
+        <p>
+            Simulation content courtesy of
+            <a href="https://phet.colorado.edu/" target="_blank" style="color: #0077cc; text-decoration: none;">
+                PhET Interactive Simulations
+            </a>,
+            University of Colorado Boulder.
+        </p>
+    </footer>
+
+</body>
+
+</html>

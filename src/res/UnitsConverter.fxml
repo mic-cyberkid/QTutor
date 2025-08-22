@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300" prefWidth="400" style="-fx-background-color: linear-gradient(to bottom, #2c3e50, #4ca1af);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UnitsConverterController">
+    <Label layoutX="140" layoutY="20" style="-fx-font-size: 18px;" text="Unit Converter" textFill="WHITE">
+      <font>
+         <Font name="Book Antiqua Bold" size="15.0" />
+      </font></Label>
+
+    <Label layoutX="50" layoutY="60" text="Category:" textFill="WHITE">
+      <font>
+         <Font name="Book Antiqua Bold" size="15.0" />
+      </font></Label>
+    <ComboBox fx:id="categoryBox" layoutX="120" layoutY="55" onAction="#updateUnits" />
+
+    <Label layoutX="50" layoutY="100" text="From:" textFill="WHITE">
+      <font>
+         <Font name="Book Antiqua Bold" size="15.0" />
+      </font></Label>
+    <ComboBox fx:id="fromUnitBox" layoutX="100" layoutY="95" />
+
+    <Label layoutX="230" layoutY="100" text="To:" textFill="WHITE">
+      <font>
+         <Font name="Book Antiqua Bold" size="15.0" />
+      </font></Label>
+    <ComboBox fx:id="toUnitBox" layoutX="260" layoutY="95" />
+
+    <Label layoutX="50" layoutY="140" text="Value:" textFill="WHITE">
+      <font>
+         <Font name="Book Antiqua Bold" size="15.0" />
+      </font></Label>
+    <TextField fx:id="inputField" layoutX="100" layoutY="135" prefWidth="100" />
+
+    <Button layoutX="220" layoutY="135" onAction="#convert" style="-fx-background-color: #61bf49;" stylesheets="@buttons.css" text="Convert" textFill="WHITE">
+      <effect>
+         <DropShadow />
+      </effect>
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font></Button>
+
+    <Label layoutX="50" layoutY="180" text="Result:" textFill="WHITE">
+      <font>
+         <Font name="Book Antiqua Bold" size="15.0" />
+      </font></Label>
+    <Label fx:id="resultLabel" layoutX="100" layoutY="180" style="-fx-font-weight: bold;" textFill="WHITE">
+      <font>
+         <Font name="Book Antiqua Bold" size="15.0" />
+      </font></Label>
+
+    <Button layoutX="300" layoutY="135" onAction="#swapUnits" style="-fx-background-color: #5071ab;" stylesheets="@buttons.css" text="Swap" textFill="WHITE">
+      <effect>
+         <DropShadow />
+      </effect>
+      <font>
+         <Font name="Book Antiqua Bold" size="15.0" />
+      </font></Button>
+</AnchorPane>

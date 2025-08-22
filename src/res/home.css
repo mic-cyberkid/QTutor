@@ -1,0 +1,40 @@
+
+#dynamicPane {
+    -fx-background-radius: 10;
+    -fx-background-color: white;
+}
+
+#dynamicPane #loginBtn {
+    -fx-background-color:  #23da3f;
+    -fx-background-radius: 80;  
+}
+
+
+#dynamicPane #signupBtn {
+    -fx-background-color: #294cc9;
+    -fx-background-radius: 80; 
+}
+
+
+#dynamicPane #exitBtn {
+    -fx-background-color: #da2323;
+    -fx-background-radius: 80; 
+    
+}
+
+.button{
+    -fx-opacity: 1;
+    -fx-transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-opacity: 0.8;
+}
+
+.button:pressed {
+    -fx-opacity: 0.7;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}

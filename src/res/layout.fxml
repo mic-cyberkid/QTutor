@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="res.LayoutController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <Label text="App Name :">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="30.0" prefWidth="258.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <Label text="Main Class :">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="30.0" prefWidth="258.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0" prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <Label text="Input Path:">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="30.0" prefWidth="258.0" />
+                  <Button mnemonicParsing="false" text="choose" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <Label text="Output Path:">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="30.0" prefWidth="258.0" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="choose" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="145.0" prefHeight="41.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="89.0" text="Build" />
+               </children>
+            </HBox>
+            <TextArea prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label text="JPackage APP" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

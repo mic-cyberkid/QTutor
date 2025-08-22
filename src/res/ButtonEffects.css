@@ -1,0 +1,24 @@
+/* Basic Button Style */
+.button {
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    /* -fx-effect: innershadow( gaussian , rgba(0, 0, 0, 0.3), 8, 0.0, 2, 2 ); */
+    -fx-transition: 0.3s ease-in-out;
+    
+}
+
+/* Hover effect */
+.button:hover {
+    -fx-background-color: #2980b9; /* Slightly darker */
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-effect: innershadow( gaussian , rgba(0, 0, 0, 0.4), 10, 0.0, 4, 4 );
+}
+
+/* Pressed effect */
+.button:pressed {
+    -fx-background-color: #1c5d88; /* Even darker on press */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: innershadow( gaussian , rgba(0, 0, 0, 0.6), 12, 0.0, 5, 5 );
+}

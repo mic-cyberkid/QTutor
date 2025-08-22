@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="664.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConverterController">
+   <center>
+      <TabPane fx:id="MainTab" prefHeight="440.0" prefWidth="600.0" style="-fx-background-radius: 10;" stylesheets="@Converter.css" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="homeTab" closable="false" style="-fx-background-color: transparent; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);">
+               <content>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0c2865;">
+                     <content>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: #0c2865;">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="129.0" prefWidth="600.0" spacing="30.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addTemperatureTab" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #49b2bc; -fx-background-radius: 10;" stylesheets="@ButtonEffects.css" text="Temperature" textAlignment="CENTER" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Times New Roman" size="30.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="51.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/icons/Temperature.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addTimeTab" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #49b2bc; -fx-background-radius: 10;" stylesheets="@ButtonEffects.css" text="Time" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Times New Roman" size="30.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="71.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/icons/Time.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="15.0" layoutY="10.0" prefHeight="129.0" prefWidth="600.0" spacing="30.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#addLengthTab" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #49b2bc; -fx-background-radius: 10;" stylesheets="@ButtonEffects.css" text="Length" textAlignment="CENTER" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Times New Roman" size="30.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="85.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/icons/RulerWhite.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addAreaTab" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #49b2bc; -fx-background-radius: 10;" stylesheets="@ButtonEffects.css" text="Area" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Times New Roman" size="33.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="76.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/icons/AreaWhite.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="201.0" prefHeight="129.0" prefWidth="600.0" spacing="30.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#addVolumeTab" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #49b2bc; -fx-background-radius: 10;" stylesheets="@ButtonEffects.css" text="Volume" textAlignment="CENTER" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Times New Roman" size="33.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <graphic>
+                                          <ImageView fitHeight="83.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/icons/VolumeObject.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addWeightTab" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #49b2bc; -fx-background-radius: 10;" stylesheets="@ButtonEffects.css" text="Weight" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Times New Roman" size="30.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="71.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/icons/Weight.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+               <graphic>
+                  <Label text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+          </Tab>
+          <Tab fx:id="temperatureTab" style="-fx-background-color: transparent;">
+               <graphic>
+                  <Label text="Temperature" textFill="WHITE">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="383.0" prefWidth="600.0" style="-fx-background-color: #0c2865; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Temperature" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="27.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="tempResult" alignment="CENTER" editable="false" layoutX="172.0" layoutY="10.0" prefHeight="51.0" prefWidth="277.0" promptText="Result">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="600.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <TextField fx:id="tempInput" alignment="CENTER" layoutX="172.0" layoutY="10.0" prefHeight="54.0" prefWidth="170.0" promptText="Value">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" spacing="20.0">
+                                       <children>
+                                          <ComboBox fx:id="tempFromBox" prefWidth="150.0" style="-fx-background-color: white; -fx-font-family: Century; -fx-font-size: 15;" />
+                                          <Label text="to" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="tempToBox" layoutX="235.0" layoutY="39.0" prefWidth="150.0" style="-fx-background-color: white; -fx-font-family: Century; -fx-font-size: 15;" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="88.0" prefWidth="600.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="90.0" prefWidth="199.0" spacing="10.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#temperatureConvert" prefHeight="42.0" prefWidth="157.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Convert" textFill="WHITE" VBox.vgrow="SOMETIMES">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Century" size="20.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="54.0" layoutY="31.0" mnemonicParsing="false" onAction="#temperatureSwap" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #5071ab; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Swap" textFill="WHITE">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Century" size="20.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="157.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#temperatureExplain" prefHeight="41.0" prefWidth="110.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Explain" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Century" size="16.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="380.0" prefWidth="414.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="218.0" text="Explanation" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="tempExplainArea" fitToHeight="true" fitToWidth="true" prefHeight="355.0" prefWidth="207.0" stylesheets="@scrollPane.css" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+          </Tab>
+            <Tab fx:id="timeTab" style="-fx-background-color: transparent;">
+               <graphic>
+                  <Label text="Time" textFill="WHITE">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <VBox prefHeight="380.0" prefWidth="488.0" style="-fx-background-color: #0c2865; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="34.0" prefWidth="243.0">
+                                       <children>
+                                          <Label text="Time" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="27.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
+                                       <children>
+                                          <TextField fx:id="timeResult" alignment="CENTER" editable="false" prefHeight="51.0" prefWidth="277.0" promptText="Result">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="600.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <TextField fx:id="timeInput" alignment="CENTER" prefHeight="54.0" prefWidth="170.0" promptText="Value">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" spacing="20.0">
+                                       <children>
+                                          <ComboBox fx:id="timeFromBox" prefWidth="150.0" style="-fx-background-color: white; -fx-font-family: Century; -fx-font-size: 15;" />
+                                          <Label text="to" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="timeToBox" layoutX="235.0" layoutY="39.0" prefWidth="150.0" style="-fx-background-color: white; -fx-font-family: Century; -fx-font-size: 15;" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="88.0" prefWidth="600.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="90.0" prefWidth="199.0" spacing="10.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#timeConvert" prefHeight="42.0" prefWidth="157.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Convert" textFill="WHITE" VBox.vgrow="SOMETIMES">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Century" size="20.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="54.0" layoutY="31.0" mnemonicParsing="false" onAction="#timeSwap" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #5071ab; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Swap" textFill="WHITE">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Century" size="20.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="176.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#timeExplain" prefHeight="41.0" prefWidth="110.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Explain" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Century" size="16.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="380.0" prefWidth="317.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="218.0" text="Explanation" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="timeExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="355.0" prefWidth="207.0" stylesheets="@scrollPane.css" VBox.vgrow="ALWAYS" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab fx:id="lengthTab" style="-fx-background-color: transparent; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);">
+               <graphic>
+                  <Label text="Length" textFill="WHITE">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <VBox prefHeight="380.0" prefWidth="603.0" style="-fx-background-color: #0c2865; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Length" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="27.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
+                                       <children>
+                                          <TextField fx:id="lengthResult" alignment="CENTER" editable="false" prefHeight="51.0" prefWidth="277.0" promptText="Result">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="600.0">
+                                       <children>
+                                          <TextField fx:id="lengthInput" alignment="CENTER" prefHeight="54.0" prefWidth="170.0" promptText="Value">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" spacing="20.0">
+                                       <children>
+                                          <ComboBox fx:id="lengthFromBox" prefWidth="150.0" style="-fx-background-color: white; -fx-font-family: Century; -fx-font-size: 15;" />
+                                          <Label text="to" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="lengthToBox" layoutX="235.0" layoutY="39.0" prefWidth="150.0" style="-fx-background-color: white; -fx-font-family: Century; -fx-font-size: 15;" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="88.0" prefWidth="600.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="90.0" prefWidth="199.0" spacing="10.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#lengthConvert" prefHeight="42.0" prefWidth="157.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Convert" textFill="WHITE" VBox.vgrow="SOMETIMES">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Century" size="20.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="54.0" layoutY="31.0" mnemonicParsing="false" onAction="#lengthSwap" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #5071ab; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Swap" textFill="WHITE">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Century" size="20.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="176.0" prefWidth="600.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#lengthExplain" prefHeight="41.0" prefWidth="110.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Explain" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Century" size="16.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="380.0" prefWidth="414.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="218.0" text="Explanation" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="lengthExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="355.0" prefWidth="207.0" stylesheets="@scrollPane.css" VBox.vgrow="ALWAYS" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab fx:id="areaTab" style="-fx-background-color: transparent; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);">
+               <graphic>
+                  <Label text="Area" textFill="WHITE">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="380.0" prefWidth="456.0" spacing="10.0" style="-fx-background-color: #0c2865; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Area" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="27.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
+                                       <children>
+                                          <TextField fx:id="areaResult" alignment="CENTER" editable="false" prefHeight="51.0" prefWidth="277.0" promptText="Result">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="600.0">
+                                       <children>
+                                          <TextField fx:id="areaInput" alignment="CENTER" prefHeight="54.0" prefWidth="170.0" promptText="Value">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" spacing="20.0">
+                                       <children>
+                                          <ComboBox fx:id="areaFromBox" prefWidth="150.0" style="-fx-background-color: white; -fx-font-family: Century; -fx-font-size: 15;" />
+                                          <Label text="to" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="areaToBox" layoutX="235.0" layoutY="39.0" prefWidth="150.0" style="-fx-background-color: white; -fx-font-size: 15; -fx-font-family: Century;" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="1.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="90.0" prefWidth="199.0" spacing="10.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#areaConvert" prefHeight="42.0" prefWidth="157.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Convert" textFill="WHITE" VBox.vgrow="SOMETIMES">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Century" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="54.0" layoutY="31.0" mnemonicParsing="false" onAction="#areaSwap" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #5071ab; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Swap" textFill="WHITE">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Century" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#areaExplain" prefHeight="41.0" prefWidth="110.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Explain" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Century" size="16.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="380.0" prefWidth="317.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="218.0" text="Explanation" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="areaExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="355.0" prefWidth="207.0" style="-fx-background-radius: 10;" stylesheets="@scrollPane.css" VBox.vgrow="ALWAYS" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab fx:id="weightTab" style="-fx-background-color: transparent; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);">
+               <graphic>
+                  <Label text="Weight" textFill="WHITE">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <VBox prefHeight="380.0" prefWidth="445.0" style="-fx-background-color: #0c2865; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Weight" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="27.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
+                                       <children>
+                                          <TextField fx:id="weightResult" alignment="CENTER" editable="false" prefHeight="51.0" prefWidth="277.0" promptText="Result">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="weightInput" alignment="CENTER" prefHeight="54.0" prefWidth="170.0" promptText="Value">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" spacing="20.0">
+                                       <children>
+                                          <ComboBox fx:id="weightFromBox" prefWidth="150.0" style="-fx-background-color: white; -fx-font-size: 15; -fx-font-family: Century;">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </ComboBox>
+                                          <Label text="to" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="weightToBox" layoutX="235.0" layoutY="39.0" prefWidth="150.0" style="-fx-background-color: white; -fx-font-family: Century; -fx-font-size: 15;" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#weightConvert" prefHeight="42.0" prefWidth="157.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Convert" textFill="WHITE" VBox.vgrow="SOMETIMES">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Century" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#weightSwap" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #5071ab; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Swap" textFill="WHITE">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Century" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#weightExplain" prefHeight="41.0" prefWidth="110.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Explain" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Century" size="16.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="380.0" prefWidth="308.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="218.0" text="Explanation" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="weightExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="355.0" prefWidth="207.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab fx:id="volumeTab" style="-fx-background-color: transparent; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);">
+               <graphic>
+                  <Label text="Volume" textFill="WHITE">
+                     <font>
+                        <Font name="Century" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <content>
+                  <HBox spacing="5.0">
+                     <children>
+                        <VBox prefHeight="380.0" prefWidth="446.0" style="-fx-background-color: #0c2865; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Volume" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="27.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
+                                       <children>
+                                          <TextField fx:id="volumeResult" alignment="CENTER" editable="false" prefHeight="51.0" prefWidth="277.0" promptText="Result">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="600.0">
+                                       <children>
+                                          <TextField fx:id="volumeInput" alignment="CENTER" prefHeight="54.0" prefWidth="170.0" promptText="Value">
+                                             <font>
+                                                <Font name="Century" size="28.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <VBox VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" spacing="20.0">
+                                       <children>
+                                          <ComboBox fx:id="volumeFromBox" prefWidth="150.0" style="-fx-background-color: white; -fx-font-size: 15; -fx-font-family: Century;">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </ComboBox>
+                                          <Label text="to" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="volumeToBox" layoutX="235.0" layoutY="39.0" prefWidth="150.0" style="-fx-background-color: white; -fx-font-size: 15; -fx-font-family: Cnetury;" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#volumeConvert" prefHeight="42.0" prefWidth="157.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Convert" textFill="WHITE" VBox.vgrow="SOMETIMES">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Century" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#volumeSwap" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #5071ab; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Swap" textFill="WHITE">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Century" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#volumeExplain" prefHeight="41.0" prefWidth="110.0" style="-fx-background-color: #61bf49; -fx-background-radius: 10px;" stylesheets="@buttons.css" text="Explain" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Century" size="16.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="381.0" prefWidth="342.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="218.0" text="Explanation" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fx:id="volumeExplainArea" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="356.0" prefWidth="275.0" stylesheets="@scrollPane.css" VBox.vgrow="ALWAYS" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+        </tabs>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </TabPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER_RIGHT" blendMode="SRC_ATOP" prefHeight="15.0" prefWidth="652.0" spacing="5.0" style="-fx-background-color: #0c2865; -fx-background-radius: 10;">
+         <children>
+            <HBox>
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/rounded/image1.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="397.0" style="-fx-background-radius: 5px;" text="Units Converter" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Book Antiqua Bold Italic" size="29.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 5;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="42.0" onMouseClicked="#minimizeWindow" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/minimize.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox fx:id="resize_box" alignment="CENTER" layoutX="628.0" layoutY="10.0" onMouseClicked="#resizeWindow" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 5;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/maximize_white.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="628.0" layoutY="10.0" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 5;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="42.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/close_white.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

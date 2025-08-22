@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="welcomeDialog" focusTraversable="true" prefHeight="247.0" prefWidth="366.0" style="-fx-background-color: #225ba4; -fx-background-radius: 15;" stylesheets="@chatPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <effect>
+      <DropShadow />
+   </effect>
+   <children>
+      <Label fx:id="welcomeMsgBox" alignment="CENTER" layoutX="13.0" layoutY="2.0" prefHeight="63.0" prefWidth="338.0" text="Welcome Back! " textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="55.0" prefHeight="35.0" prefWidth="186.0" text="What can I help with?" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="32.0" layoutY="101.0" mnemonicParsing="false" onAction="#lessonPlannerPrompt" prefHeight="34.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(96,161,195,0.6);" styleClass="custom-button" text="Plan a lesson" textFill="WHITE">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="createQuizPrompt" layoutX="189.0" layoutY="101.0" mnemonicParsing="false" onAction="#quizPrompt" prefHeight="34.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(96,161,195,0.6);" styleClass="custom-button" text="Create Quizzes" textFill="WHITE">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="explainConceptPrompt" layoutX="32.0" layoutY="153.0" mnemonicParsing="false" onAction="#explainConceptPrompt" prefHeight="34.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(96,161,195,0.6);" styleClass="custom-button" text="Explain Concept" textFill="WHITE">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="189.0" layoutY="153.0" mnemonicParsing="false" onAction="#plotGraph" prefHeight="34.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(96,161,195,0.6);" styleClass="custom-button" text="Plot Graph" textFill="WHITE">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</Pane>

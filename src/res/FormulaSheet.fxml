@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="resize_box" spacing="5.0" style="-fx-background-color: #225ba4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FormulaSheetController">
+   <children>
+      <VBox prefHeight="0.0" prefWidth="555.0" style="-fx-background-radius: 10;">
+         <children>
+            <HBox alignment="CENTER_RIGHT" blendMode="SRC_ATOP" prefHeight="15.0" prefWidth="652.0" spacing="5.0" style="-fx-background-color: #225ba4; -fx-background-radius: 10;">
+               <children>
+                  <HBox>
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/rounded/image1.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="397.0" style="-fx-background-radius: 5px;" text="Formula Sheet" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="29.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="42.0" onMouseClicked="#minimizeWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="628.0" layoutY="10.0" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="42.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons/close_white.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+      <HBox>
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="432.0" prefWidth="555.0" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/1.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="29.0" layoutY="27.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/2.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="407.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/3.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="804.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/4.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="1201.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/5.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="1598.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/6.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="1995.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/7.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="2392.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/8.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="2789.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/9.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="3186.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/10.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="3583.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/11.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="3980.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/12.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="4377.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/13.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="4774.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/14.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="5171.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/15.PNG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="397.0" fitWidth="516.0" layoutX="22.0" layoutY="5568.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@images/formulas/16.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

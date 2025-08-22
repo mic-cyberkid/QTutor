@@ -1,0 +1,30 @@
+.background {
+    -fx-fill: linear-gradient(to bottom right, #0a0a1f, #1f0033);
+}
+
+.title {
+    -fx-font-size: 28px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-text-fill: #00ffff;
+    -fx-font-weight: bold;
+}
+
+.progress-text {
+    -fx-font-size: 24px;
+    -fx-text-fill: #00e6ff;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.status-text {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ccccff;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.progress-bar {
+    -fx-accent: #00ccff;
+}
+
+.circle-container {
+    -fx-padding: 20px;
+}

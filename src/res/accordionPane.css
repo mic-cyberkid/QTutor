@@ -1,0 +1,57 @@
+/* Style the Accordion */
+.accordion {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Style each TitledPane */
+.titled-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-radius: 10px; /* Rounded corners for the border */
+    -fx-background-radius: 10px; /* Rounded corners for the background */
+    -fx-padding: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1); /* Subtle shadow for depth */
+}
+
+/* Style the title region of each TitledPane */
+.accordion .titled-pane > .title {
+    -fx-background-color: #0c2865; /*linear-gradient(to bottom, #2c3e50, #4ca1af); /* Background color of the title */
+    -fx-background-radius: 10px; /* Rounded corners for the title */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-family: Century;
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px;
+}
+
+
+
+#loadbtn {
+    -fx-background-image: url("images/icons/white_share_small.png");
+    -fx-background-size: contain; /* Ensures the image is contained within the button */
+    -fx-background-repeat: no-repeat; /* Avoid repeating the image */
+    /* -fx-background-position: center center; /* Centers the image */
+    -fx-background-radius: 5px; 
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-background-color: lime; 
+    -fx-text-fill: white;
+    
+}
+
+
+#deletebtn {
+    -fx-background-image: url("images/icons/white_delete_small.png");
+    -fx-background-size: contain; /* Ensures the image is contained within the button */
+    -fx-background-repeat: no-repeat; /* Avoid repeating the image */
+    -fx-background-radius: 5px; 
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
+    -fx-background-color: red; 
+    -fx-padding: 5px;
+    -fx-text-fill: white; 
+    -fx-font-size: 14px;
+}
+

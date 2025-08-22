@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="homePage" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0c2865 0.0%, #000000 100.0%);" stylesheets="@chatPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
+   <children>
+      <VBox prefHeight="40.0" prefWidth="672.0" style="-fx-background-color: transparent; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <children>
+            <HBox alignment="CENTER_RIGHT" blendMode="SRC_ATOP" prefHeight="15.0" prefWidth="652.0" spacing="5.0" style="-fx-background-color: #225ba4; -fx-background-radius: 8;">
+               <children>
+                  <HBox>
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/rounded/image1.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="397.0" style="-fx-background-radius: 5px;" text="QuarkTutor" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="29.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 5;" styleClass="icon-button-container">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="42.0" onMouseClicked="#minimizeWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="resize_box" alignment="CENTER" layoutX="628.0" layoutY="10.0" onMouseClicked="#resizeWindow" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 5;" styleClass="icon-button-container">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons/maximize_white.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="628.0" layoutY="10.0" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 5;" styleClass="window-control-button-close">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="42.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons/close_white.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="397.0" prefWidth="590.0" style="-fx-background-radius: 10;" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </VBox.margin>
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="357.0" prefWidth="286.0" style="-fx-background-radius: 10px; -fx-boder-radius: 10; -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0c2865 0.0%, #000000 100.0%);">
+                     <children>
+                        <ImageView fitHeight="299.0" fitWidth="291.0" style="-fx-border-radius: 10; -fx-background-radius: 20;">
+                           <image>
+                              <Image url="@images/icons/Atom%20Icon.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="dynamicBox" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0c2865 0.0%, #000000 100.0%); -fx-background-radius: 10;">
+                     <children>
+                        <VBox id="dynamicPane" alignment="CENTER" prefHeight="387.0" prefWidth="284.0" spacing="20.0" style="-fx-background-color: rgba(44,62,80,0.2);" stylesheets="@home.css">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="72.0" prefWidth="278.0">
+                                 <children>
+                                    <Label prefHeight="31.0" prefWidth="156.0" text="Kindly Login" textFill="#fff9f9" wrapText="true">
+                                       <font>
+                                          <Font name="Book Antiqua Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="119.0" text="or Signup" textFill="#fff9f9" wrapText="true">
+                                       <font>
+                                          <Font name="Book Antiqua Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="48.0" prefHeight="31.0" prefWidth="156.0" text="to Continue" textFill="#fff9f9" wrapText="true">
+                                       <font>
+                                          <Font name="Book Antiqua Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button id="loginBtn" alignment="CENTER" mnemonicParsing="false" onAction="#loginPage" prefHeight="59.0" prefWidth="247.0" style="-fx-background-radius: 80px;" styleClass="custom-button" stylesheets="@chatPane.css" text="Login" textFill="WHITE">
+                                 <font>
+                                    <Font name="Book Antiqua Bold" size="27.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/icons/login-white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="signupBtn" alignment="CENTER" layoutX="51.0" layoutY="174.0" mnemonicParsing="false" onAction="#signupPage" prefHeight="59.0" prefWidth="249.0" style="-fx-background-radius: 80px;" styleClass="custom-button" stylesheets="@chatPane.css" text="SignUp" textFill="WHITE">
+                                 <font>
+                                    <Font name="Book Antiqua Bold" size="27.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/icons/add-user-white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="exitBtn" alignment="CENTER" layoutX="34.0" layoutY="224.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="53.0" prefWidth="178.0" styleClass="custom-button" stylesheets="@chatPane.css" text="Exit" textFill="WHITE">
+                                 <font>
+                                    <Font name="Book Antiqua Bold" size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="39.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/icons/white_exit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane fx:id="SimulationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="729.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0c2865 0.0%, #29977b 100.0%); -fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LabSimulationsController">
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="54.0" prefWidth="729.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label prefHeight="26.0" prefWidth="634.0" text="Simulations by PhET Interactive Simulations, University of Colorado Boulder – CC BY 4.0" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="15.0" />
+               </font>
+            </Label>
+            <Hyperlink prefHeight="28.0" prefWidth="231.0" text="https://phet.colorado.edu" textFill="#238dd3">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </Hyperlink>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox fx:id="simulationPane" alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="368.0" fitWidth="586.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/PHET/phet-logo-trademarked.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Renderer with Mermaid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      font-size: 1rem;
+    }
+
+    #chatbox {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .message.user {
+      margin-bottom: 20px;
+      background: #eef;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    .mermaid {
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    .save-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .save-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+  <script async src='Marked.js'></script>
+  <script async src='tex-mml-chtml.min.js'></script>
+  <script async src="mermaid.min.js"></script>
+  <script async src="AppScript.js"></script>
+</head>
+
+<body>
+
+  <h2>Markdown Renderer Test</h2>
+
+  <textarea id="markdownInput" placeholder="Paste your markdown with mermaid code blocks here..."></textarea>
+  <br>
+  <button onclick="renderInput()">Render</button>
+
+  <div id="chatbox"></div>
+
+  <script>
+    function renderMarkdown(markdownText, user) {
+      // Extract mermaid code blocks
+      const mermaidBlocks = [];
+      markdownText = markdownText.replace(/```mermaid\s+([\s\S]*?)```/g, (match, code) => {
+        mermaidBlocks.push(code.trim());
+        return `<!--MERMAID_BLOCK_${mermaidBlocks.length - 1}-->`;
+      });
+
+      // Parse the rest of the markdown
+      let htmlContent = marked.parse(markdownText);
+
+      // Replace placeholders with mermaid divs
+      mermaidBlocks.forEach((code, index) => {
+        const mermaidDiv = `<div class="mermaid">${code}</div>`;
+        htmlContent = htmlContent.replace(`<!--MERMAID_BLOCK_${index}-->`, mermaidDiv);
+      });
+
+      // Create a message container div
+      var div = document.createElement('div');
+      div.className = 'message ' + user;
+      div.innerHTML = htmlContent;
+
+      // Append to chatbox
+      document.getElementById('chatbox').appendChild(div);
+
+      // Scroll to bottom
+      window.scrollTo(0, document.body.scrollHeight);
+
+      // Trigger MathJax rendering
+      if (typeof MathJax !== 'undefined' && MathJax.Hub) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+      }
+
+      // Trigger Mermaid rendering and add Save buttons
+      if (typeof mermaid !== 'undefined') {
+        const mermaidElements = div.querySelectorAll(".mermaid");
+        mermaid.init(undefined, mermaidElements);
+
+        // Add save buttons for each rendered mermaid diagram
+        mermaidElements.forEach((el, index) => {
+          const btn = document.createElement("button");
+          // Create PNG button
+          const pngBtn = document.createElement("button");
+          pngBtn.textContent = "💾 Save as PNG";
+          pngBtn.className = "save-btn";
+          pngBtn.style.marginRight = "10px";
+          pngBtn.onclick = () => saveMermaidAsPNG(el, `diagram-${index}`);
+
+          // Create SVG button
+          const svgBtn = document.createElement("button");
+          svgBtn.textContent = "🖼️ Save as SVG";
+          svgBtn.className = "save-btn";
+          svgBtn.onclick = () => saveMermaidAsSVG(el, `diagram-${index}`);
+
+          // Add buttons after the diagram
+          el.insertAdjacentElement('afterend', svgBtn);
+          el.insertAdjacentElement('afterend', pngBtn);
+
+        });
+      }
+    }
+
+    function renderInput() {
+      const input = document.getElementById('markdownInput').value;
+      renderMarkdown(input, 'user');
+    }
+
+    function saveMermaidAsImage(container, filename) {
+      const svg = container.querySelector('svg');
+      if (!svg) {
+        alert('Diagram not yet rendered.');
+        return;
+      }
+
+      const clone = svg.cloneNode(true);
+      const svgData = new XMLSerializer().serializeToString(clone);
+      const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+      const url = URL.createObjectURL(svgBlob);
+
+      const img = new Image();
+      img.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+
+        canvas.toBlob(function (blob) {
+          const link = document.createElement("a");
+          link.download = filename + ".png";
+          link.href = URL.createObjectURL(blob);
+          link.click();
+          URL.revokeObjectURL(link.href);
+        }, "image/png");
+
+        URL.revokeObjectURL(url);
+      };
+      img.src = url;
+    }
+
+    function saveMermaidAsPNG(container, filename) {
+      const svg = container.querySelector('svg');
+      if (!svg) {
+        alert('Diagram not yet rendered.');
+        return;
+      }
+
+      const svgData = new XMLSerializer().serializeToString(svg);
+      const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+      const reader = new FileReader();
+
+      reader.onload = function () {
+        const img = new Image();
+        img.onload = function () {
+          // Improve clarity: Scale up the canvas
+          const scaleFactor = 2; // 2x resolution (change to 3 or more for even clearer PNG)
+          const canvas = document.createElement("canvas");
+          canvas.width = img.width * scaleFactor;
+          canvas.height = img.height * scaleFactor;
+
+          const ctx = canvas.getContext("2d");
+          ctx.setTransform(scaleFactor, 0, 0, scaleFactor, 0, 0); // Scale up context
+          ctx.drawImage(img, 0, 0);
+
+          canvas.toBlob(function (blob) {
+            const link = document.createElement("a");
+            link.download = filename + ".png";
+            link.href = URL.createObjectURL(blob);
+            link.click();
+            URL.revokeObjectURL(link.href);
+          }, "image/png");
+        };
+
+        img.src = reader.result;
+      };
+
+      reader.readAsDataURL(svgBlob);
+    }
+
+    function saveMermaidAsSVG(container, filename) {
+      const svg = container.querySelector('svg');
+      if (!svg) {
+        alert('Diagram not yet rendered.');
+        return;
+      }
+
+      const svgData = new XMLSerializer().serializeToString(svg);
+      const blob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename + ".svg";
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+{
+    "Length": {
+        "Meter": {
+            "toBase": "iv",
+            "fromBase": "iv"
+        },
+        "Kilometer": {
+            "toBase": "iv*1000",
+            "fromBase": "iv/1000"
+        },
+        "Centimeter": {
+            "toBase": "iv*0.01",
+            "fromBase": "iv/0.01"
+        },
+        "Millimeter": {
+            "toBase": "iv*0.001",
+            "fromBase": "iv/0.001"
+        },
+        "Micrometer": {
+            "toBase": "iv*0.000001",
+            "fromBase": "iv/0.000001"
+        },
+        "Nanometer": {
+            "toBase": "iv*0.000000001",
+            "fromBase": "iv/0.000000001"
+        },
+        "Mile": {
+            "toBase": "iv*1609.344",
+            "fromBase": "iv/1609.344"
+        },
+        "Yard": {
+            "toBase": "iv*0.9144",
+            "fromBase": "iv/0.9144"
+        },
+        "Foot": {
+            "toBase": "iv*0.3048",
+            "fromBase": "iv/0.3048"
+        },
+        "Inch": {
+            "toBase": "iv*0.0254",
+            "fromBase": "iv/0.0254"
+        },
+        "Light Year": {
+            "toBase": "iv*9.46066e+15",
+            "fromBase": "iv/9.46066e+15"
+        }
+    },
+    "Temperature": {
+        "Celsius": {
+            "toBase": "iv",
+            "fromBase": "iv"
+        },
+        "Kelvin": {
+            "toBase": "iv - 273.15",
+            "fromBase": "iv + 273.15"
+        },
+        "Fahrenheit": {
+            "toBase": "5/9*(iv-32)",
+            "fromBase": "9/5*iv + 32"
+        }
+    },
+    "Area": {
+        "Square Meter": {
+            "toBase": "iv",
+            "fromBase": "iv"
+        },
+        "Square Kilometer": {
+            "toBase": "iv*1000000",
+            "fromBase": "iv/1000000"
+        },
+        "Square Centimeter": {
+            "toBase": "iv*0.0001",
+            "fromBase": "iv/0.0001"
+        },
+        "Square Millimeter": {
+            "toBase": "iv*0.000001",
+            "fromBase": "iv/0.000001"
+        },
+        "Square Micrometer": {
+            "toBase": "iv*0.000000000001",
+            "fromBase": "iv/0.000000000001"
+        },
+        "Hectare": {
+            "toBase": "iv*10000",
+            "fromBase": "iv/10000"
+        },
+        "Square Mile": {
+            "toBase": "iv*2589990",
+            "fromBase": "iv/2589990"
+        },
+        "Square Yard": {
+            "toBase": "iv*0.83612736",
+            "fromBase": "iv/0.83612736"
+        },
+        "Square Foot": {
+            "toBase": "iv*0.09290304",
+            "fromBase": "iv/0.09290304"
+        },
+        "Square Inch": {
+            "toBase": "iv*0.000645160",
+            "fromBase": "iv/0.000645160"
+        },
+        "Acre": {
+            "toBase": "iv*4046.8564224",
+            "fromBase": "iv/4046.8564224"
+        }
+    },
+    "Volume": {
+        "Cubic Meter": {
+            "toBase": "iv",
+            "fromBase": "iv"
+        },
+        "Cubic Kilometer": {
+            "toBase": "iv*1000000000",
+            "fromBase": "iv/1000000000"
+        },
+        "Cubic Centimeter": {
+            "toBase": "iv*0.000001",
+            "fromBase": "iv/0.000001"
+        },
+        "Cubic Millimeter": {
+            "toBase": "iv*1.0e-9",
+            "fromBase": "iv/1.0e-9"
+        },
+        "Liter": {
+            "toBase": "iv*0.001",
+            "fromBase": "iv/0.001"
+        },
+        "Milliliter": {
+            "toBase": "iv*0.000001",
+            "fromBase": "iv/0.000001"
+        },
+        "US Gallon": {
+            "toBase": "iv*0.00378541",
+            "fromBase": "iv/0.00378541"
+        },
+        "US Quart": {
+            "toBase": "iv*0.0009463525",
+            "fromBase": "iv/0.0009463525"
+        },
+        "US Pint": {
+            "toBase": "iv*0.00047317625",
+            "fromBase": "iv/0.00047317625"
+        },
+        "US Cup": {
+            "toBase": "iv*0.000236588125",
+            "fromBase": "iv/0.000236588125"
+        },
+        "US Fluid Ounce": {
+            "toBase": "iv*0.000029573515625",
+            "fromBase": "iv/0.000029573515625"
+        },
+        "US Table Spoon": {
+            "toBase": "iv*0.0000147867578125",
+            "fromBase": "iv/0.0000147867578125"
+        },
+        "US Tea Spoon": {
+            "toBase": "iv*4.9289192708333333333333333333333e-6",
+            "fromBase": "iv/4.9289192708333333333333333333333e-6"
+        },
+        "Imperial Gallon": {
+            "toBase": "iv*0.00454609",
+            "fromBase": "iv/0.00454609"
+        },
+        "Imperial Quart": {
+            "toBase": "iv*0.0011365225",
+            "fromBase": "iv/0.0011365225"
+        },
+        "Imperial Pint": {
+            "toBase": "iv*0.00056826125",
+            "fromBase": "iv/0.00056826125"
+        },
+        "Imperial Fluid Ounce": {
+            "toBase": "iv*0.0000284130625",
+            "fromBase": "iv/0.0000284130625"
+        },
+        "Imperial Table Spoon": {
+            "toBase": "iv*0.0000177581640625",
+            "fromBase": "iv/0.0000177581640625"
+        },
+        "Imperial Tea Spoon": {
+            "toBase": "iv*5.9193880208333333333333333333333e-6",
+            "fromBase": "iv/5.9193880208333333333333333333333e-6"
+        },
+        "Cubic Mile": {
+            "toBase": "iv*4.16818e+9",
+            "fromBase": "iv/4.16818e+9"
+        },
+        "Cubic Yard": {
+            "toBase": "iv*0.764554857984",
+            "fromBase": "iv/0.764554857984"
+        },
+        "Cubic Foot": {
+            "toBase": "iv*0.028316846592",
+            "fromBase": "iv/0.028316846592"
+        },
+        "Cubic Inch": {
+            "toBase": "iv*0.000016387064",
+            "fromBase": "iv/0.000016387064"
+        }
+    },
+    "Weight": {
+        "Kilogram": {
+            "toBase": "iv",
+            "fromBase": "iv"
+        },
+        "Gram": {
+            "toBase": "iv*0.001",
+            "fromBase": "iv/0.001"
+        },
+        "Milligram": {
+            "toBase": "iv*0.000001",
+            "fromBase": "iv/0.000001"
+        },
+        "Metric Ton": {
+            "toBase": "iv*1000",
+            "fromBase": "iv/1000"
+        },
+        "Long Ton": {
+            "toBase": "iv*1016.04608",
+            "fromBase": "iv/1016.04608"
+        },
+        "Short Ton": {
+            "toBase": "iv*907.184",
+            "fromBase": "iv/907.184"
+        },
+        "Pound": {
+            "toBase": "iv*0.453592",
+            "fromBase": "iv/0.453592"
+        },
+        "Ounce": {
+            "toBase": "iv*0.0283495",
+            "fromBase": "iv/0.0283495"
+        },
+        "Carrat": {
+            "toBase": "iv*0.0002",
+            "fromBase": "iv/0.0002"
+        },
+        "Atomic Mass Unit": {
+            "toBase": "iv*1.6605401999104288e-27",
+            "fromBase": "iv/1.6605401999104288e-27"
+        }
+    },
+    "Time": {
+        "Second": {
+            "toBase": "iv",
+            "fromBase": "iv"
+        },
+        "Millisecond": {
+            "toBase": "iv*0.001",
+            "fromBase": "iv/0.001"
+        },
+        "Microsecond": {
+            "toBase": "iv*0.000001",
+            "fromBase": "iv/0.000001"
+        },
+        "Nanosecond": {
+            "toBase": "iv*0.000000001",
+            "fromBase": "iv/0.000000001"
+        },
+        "Picosecond": {
+            "toBase": "iv*0.000000000001",
+            "fromBase": "iv/0.000000000001"
+        },
+        "Minute": {
+            "toBase": "iv*60",
+            "fromBase": "iv/60"
+        },
+        "Hour": {
+            "toBase": "iv*3600",
+            "fromBase": "iv/3600"
+        },
+        "Day": {
+            "toBase": "iv*86400",
+            "fromBase": "iv/86400"
+        },
+        "Week": {
+            "toBase": "iv*604800",
+            "fromBase": "iv/604800"
+        },
+        "Month": {
+            "toBase": "iv*2629800",
+            "fromBase": "iv/2629800"
+        },
+        "Year": {
+            "toBase": "iv*31557600",
+            "fromBase": "iv/31557600"
+        }
+    }
+}

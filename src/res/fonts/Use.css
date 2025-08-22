@@ -1,0 +1,22 @@
+/* Add this at the very top of your CSS files (e.g., chatPane.css, Converter.css, welcomeDialog.css) */
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Regular.ttf"); /* Adjust path if your fonts folder is elsewhere */
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Medium.ttf"); /* Adjust path */
+    font-weight: 500; /* Or "medium" if your font file specifies it differently */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Bold.ttf"); /* Adjust path */
+    font-weight: bold;
+}
+
+/* Existing CSS rules follow below this */
+/* ... */

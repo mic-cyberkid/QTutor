@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Renderer with Mermaid</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .message {
+      max-width: 80%;
+      border-radius: 10px;
+      margin: 5px;
+    }
+
+    .user {
+      background-color: #225ba4;
+      color: white;
+      align-self: flex-end;
+      min-width: 40px;
+      text-align: center;
+      margin: 2px;
+      padding: 2px;
+      border-radius: 20px;
+    }
+    
+
+    .bot {
+      background-color: #e0e0e0;
+      color: black;
+      align-self: flex-start;
+      text-align: left;
+      margin: 5px;
+      padding: 10px;
+      overflow-wrap: break-word;
+    }
+
+    pre {
+      background-color: #000102;
+      border-radius: 10px;
+      color: wheat;
+      box-shadow: 2px 2px grey;
+      padding: 5px;
+      margin: 5px;
+    }
+
+    /* Table style for the chat */
+    table {
+      border-collapse: separate;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    table caption {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    table caption img {
+      max-width: 50%;
+      height: auto;
+    }
+
+    table .header-row {
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    /* Add a fade-in effect when the table is loaded */
+    table {
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .typing {
+      font-weight: bold;
+      animation: blink 1s infinite;
+    }
+    
+    .warning{
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    #chatbox {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .mermaid {
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    .save-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .save-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+  <script async src='Marked.js'></script>
+  <script async src='tex-mml-chtml.min.js'></script>
+  <script async src="mermaid.min.js"></script>
+  <script async src="AppScript.js"></script>
+</head>
+
+<body>
+  <div id="chatbox"></div>
+</body>
+
+</html>
